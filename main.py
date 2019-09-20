@@ -66,7 +66,7 @@ for url in urls:
 
             type = soup.find('span', {'class':{'jobsearch-JobMetadataHeader-item'}}).text.strip()
 
-            summary = soup.find('div', {'class':{'jobsearch-JobComponent-description'}}).text.strip().strip('\t').replace('\t','').replace('\n','   ')
+            summary = soup.find('div', {'class':{'jobsearch-JobComponent-description'}}).text.strip().replace('\t','').replace('\n','').strip('\n').strip('\t')
 
             try:
                 email = standardre.findall(r'[\w\.-]+@[\w\.-]+\.\w+', summary)[0]
