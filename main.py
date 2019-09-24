@@ -16,7 +16,7 @@ urls = open("urls.txt").readlines()
 # Write to CSV file
 outfile = open('indeed.csv','a', encoding="utf-8", newline='')
 writer = csv.writer(outfile, delimiter=",")
-writer.writerow(["Title", "Company", "Location", "Country", "Type", "Summary", "Email", "Website", "Source", "PostedDate"])
+writer.writerow(["Title", "Company", "City", "Country", "Type", "Summary", "Email", "Website", "Source", "PostedDate"])
 
 
 #Scrape all URLs
@@ -53,9 +53,11 @@ for url in urls:
 
         soup = bs4.BeautifulSoup(html, 'html.parser')
 
-        print("=====================================================")
-        print ('Processing... urls[' + str(urls.index(url)) + '] page: ' + str(page))
-        print("=====================================================")
+        print("=======================================================")
+        print("                                                     ")
+        print('Processing... urls[' + str(urls.index(url)) + '] page: ' + str(page))
+        print("                                                     ")
+        print("=======================================================")
 
 
         job_list = soup.findAll("div",{"class":"jobsearch-SerpJobCard"})
@@ -75,10 +77,10 @@ for url in urls:
 
             company = job.find('span').text.strip()
 
-            location = job.find({'span','div'}, {'class':'location'}).text.strip()
+            city = job.find({'span','div'}, {'class':'location'}).text.strip()
 
             try:
-                country = geolocator.geocode(location, language='en')._address.split()[-1]
+                country = geolocator.geocode(city, language='en')._address.split()[-1]
             except:
                 country = ''
 
@@ -119,12 +121,12 @@ for url in urls:
 
             #scrapeDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-            writer.writerow([titleStr, company, location, country, typeStr, summary, emailStr, websiteStr, source, postedDateStr])
+            writer.writerow([titleStr, company, city, country, typeStr, summary, emailStr, websiteStr, source, postedDateStr])
 
             print("_________________________________________________________________________________")
             print('Title: ' + titleStr)
             print('Company: ' + company)
-            print('Location: ' + location)
+            print('City: ' + city)
             seperator = ', '
             print('Type: ' + seperator.join(typeStr))
 
