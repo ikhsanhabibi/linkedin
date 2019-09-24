@@ -1,27 +1,29 @@
 import re as standardre
+import time
 from datetime import datetime
 
 import requests, bs4
 import csv
-import time
-#from selenium import webdriver
+
+from geopy.geocoders import Nominatim
+geolocator = Nominatim()
 
 headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"}
 
-urls = [ "https://de.indeed.com/Jobs?q=android+entwickler&jt=internship"]
+urls = open("urls.txt").readlines()
 
 
 # Write to CSV file
 outfile = open('indeed.csv','a', encoding="utf-8", newline='')
 writer = csv.writer(outfile, delimiter=",")
-writer.writerow(["Title", "Company", "Location", "Type", "Summary", "Email", "Website", "PostedDate", "ScrapeDate"])
+writer.writerow(["Title", "Company", "Location", "Country", "Type", "Summary", "Email", "Website", "Source", "PostedDate", "ScrapeDate"])
 
 
 #scrape elements
 for url in urls:
-    #root_url = url
+
     html = requests.get(url, headers=headers).content.decode('utf-8')
-    time.sleep(3)
+    time.sleep(1)
     soup = bs4.BeautifulSoup(html, 'html.parser')
 
 
@@ -31,17 +33,19 @@ for url in urls:
     last_page = paging[len(paging)-2].text
 
 
-
     # Scrape per page
+
     pages = list(range(1,int(last_page)+1))
     for page in pages:
         page_url = url + '&start=' + str((int(page-1)*10))
         html = requests.get(page_url, headers=headers).content.decode('utf-8')
-        time.sleep(3)
+        time.sleep(1)
 
         soup = bs4.BeautifulSoup(html, 'html.parser')
 
+        print("=====================================================")
         print ('Processing URL with index: ' + str(urls.index(url)) + ' page: ' + str(page))
+        print("=====================================================")
 
 
 
@@ -50,7 +54,7 @@ for url in urls:
 
             link_job_page = 'https://indeed.com' + job.find('a').attrs['href']
             html = requests.get(link_job_page, headers=headers).content.decode('utf-8')
-            time.sleep(3)
+            time.sleep(1)
 
             soup = bs4.BeautifulSoup(html, 'html.parser')
 
@@ -61,7 +65,13 @@ for url in urls:
 
             location = job.find({'span','div'}, {'class':'location'}).text.strip()
 
-            type = soup.find('span', {'class':{'jobsearch-JobMetadataHeader-item'}}).text.strip()
+            country = geolocator.geocode(location, language='en')._address.split()[-1]
+
+            try:
+                type = soup.find('span', {'class':{'jobsearch-JobMetadataHeader-item'}})
+                typeStr = type.text.strip().split()
+            except:
+                typeStr = ''
 
             summary = soup.find('div', {'id':{'jobDescriptionText'}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").strip('\n').strip('\t')
 
@@ -86,14 +96,21 @@ for url in urls:
 
             postedDate = job.find('div', {"class": {"result-link-bar"}}).find("span",{"class":{"date"}})
 
+            source = 'indeed'
+
             try:
                 postedDateStr = str(postedDate.text)
             except:
                 postedDateStr = ''
 
-            scrapeDate = datetime.now()
+            scrapeDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-            writer.writerow([titleStr, company, location, type, summary, emailStr, websiteStr, postedDateStr, scrapeDate])
+            writer.writerow([titleStr, company, location, country, typeStr, summary, emailStr, websiteStr, source, postedDateStr, scrapeDate])
+
+            print("..................................................................")
+            print('Title: ' + titleStr)
+            print('Company: ' + company)
+            print('Location: ' + location)
 
 
 
