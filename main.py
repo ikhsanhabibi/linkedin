@@ -16,37 +16,46 @@ urls = open("urls.txt").readlines()
 # Write to CSV file
 outfile = open('indeed.csv','a', encoding="utf-8", newline='')
 writer = csv.writer(outfile, delimiter=",")
-writer.writerow(["Title", "Company", "Location", "Country", "Type", "Summary", "Email", "Website", "Source", "PostedDate", "ScrapeDate"])
+writer.writerow(["Title", "Company", "Location", "Country", "Type", "Summary", "Email", "Website", "Source", "PostedDate"])
 
 
-#scrape elements
+#Scrape all URLs
 for url in urls:
 
     html = requests.get(url, headers=headers).content.decode('utf-8')
-    time.sleep(1)
+    #time.sleep(1)
     soup = bs4.BeautifulSoup(html, 'html.parser')
+
+    # Page Counter
+    page_counter = 0
+    while True:
+        my_url = url + "&start=" + str(page_counter)
+        page_html = requests.get(my_url).text
+        if "Weiter&nbsp;&raquo;" in page_html:
+            page_counter += 10
+        else:
+            break
+
+    # Max Pages = 100
+    pages = list(range(1, int(page_counter/10) + 1))
 
 
     # Pagination
-    paging = soup.find("div",{"class":"pagination"}).find_all("a")
+    paging = soup.find("div", {"class": "pagination"}).find_all("a")
     start_page = int(paging[0].text) - 1
-    last_page = paging[len(paging)-2].text
-
+    last_page = int(page_counter/10) + 1
 
     # Scrape per page
-
-    pages = list(range(1,int(last_page)+1))
     for page in pages:
-        page_url = url + '&start=' + str((int(page-1)*10))
+        page_url = url + '&start=' + str((int(page - 1) * 10))
         html = requests.get(page_url, headers=headers).content.decode('utf-8')
-        time.sleep(1)
+        #time.sleep(1)
 
         soup = bs4.BeautifulSoup(html, 'html.parser')
 
         print("=====================================================")
-        print ('Processing URL with index: ' + str(urls.index(url)) + ' page: ' + str(page))
+        print ('Processing... urls[' + str(urls.index(url)) + '] page: ' + str(page))
         print("=====================================================")
-
 
 
         job_list = soup.findAll("div",{"class":"jobsearch-SerpJobCard"})
@@ -54,22 +63,28 @@ for url in urls:
 
             link_job_page = 'https://indeed.com' + job.find('a').attrs['href']
             html = requests.get(link_job_page, headers=headers).content.decode('utf-8')
-            time.sleep(1)
+            #time.sleep(1)
 
             soup = bs4.BeautifulSoup(html, 'html.parser')
 
-            title = soup.find('h3')
-            titleStr = title.text.strip()
+            try:
+                title = soup.find('h3')
+                titleStr = title.text.strip()
+            except:
+                titleStr = ''
 
             company = job.find('span').text.strip()
 
             location = job.find({'span','div'}, {'class':'location'}).text.strip()
 
-            country = geolocator.geocode(location, language='en')._address.split()[-1]
+            try:
+                country = geolocator.geocode(location, language='en')._address.split()[-1]
+            except:
+                country = ''
 
             try:
                 type = soup.find('span', {'class':{'jobsearch-JobMetadataHeader-item'}})
-                typeStr = type.text.strip().split()
+                typeStr = type.text.replace(",", " ").split()
             except:
                 typeStr = ''
 
@@ -94,23 +109,24 @@ for url in urls:
             except:
                 websiteStr = ''
 
-            postedDate = job.find('div', {"class": {"result-link-bar"}}).find("span",{"class":{"date"}})
-
-            source = 'indeed'
-
             try:
+                postedDate = job.find('div', {"class": {"result-link-bar"}}).find("span", {"class": {"date"}})
                 postedDateStr = str(postedDate.text)
             except:
                 postedDateStr = ''
 
-            scrapeDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            source = 'indeed'
 
-            writer.writerow([titleStr, company, location, country, typeStr, summary, emailStr, websiteStr, source, postedDateStr, scrapeDate])
+            #scrapeDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-            print("..................................................................")
+            writer.writerow([titleStr, company, location, country, typeStr, summary, emailStr, websiteStr, source, postedDateStr])
+
+            print("_________________________________________________________________________________")
             print('Title: ' + titleStr)
             print('Company: ' + company)
             print('Location: ' + location)
+            seperator = ', '
+            print('Type: ' + seperator.join(typeStr))
 
 
 
