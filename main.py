@@ -21,8 +21,8 @@ writer.writerow(["Title", "Company", "City", "Country", "Type", "Summary", "Emai
 
 #Scrape all URLs
 for url in urls:
-
-    html = requests.get(url, headers=headers).content.decode('utf-8')
+    urlClean = url.replace("\n", "")
+    html = requests.get(urlClean, headers=headers).content.decode('utf-8')
     #time.sleep(1)
     soup = bs4.BeautifulSoup(html, 'html.parser')
 
@@ -31,19 +31,20 @@ for url in urls:
     while True:
         my_url = url + "&start=" + str(page_counter)
         page_html = requests.get(my_url).text
+
         if "Weiter&nbsp;&raquo;" in page_html:
             page_counter += 10
         else:
             break
+    page_counter+= 10;
 
     # Max Pages = 100
     pages = list(range(1, int(page_counter/10) + 1))
-
+    print("Total Page: " + str(len(pages)))
 
     # Pagination
-    paging = soup.find("div", {"class": "pagination"}).find_all("a")
-    start_page = int(paging[0].text) - 1
-    last_page = int(page_counter/10) + 1
+    start_page = 1
+    last_page = len(pages)
 
     # Scrape per page
     for page in pages:
@@ -66,7 +67,6 @@ for url in urls:
             link_job_page = 'https://indeed.com' + job.find('a').attrs['href']
             html = requests.get(link_job_page, headers=headers).content.decode('utf-8')
             #time.sleep(1)
-
             soup = bs4.BeautifulSoup(html, 'html.parser')
 
             try:
@@ -90,7 +90,10 @@ for url in urls:
             except:
                 typeStr = ''
 
-            summary = soup.find('div', {'id':{'jobDescriptionText'}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").strip('\n').strip('\t')
+            try:
+                summary = soup.find('div', {'id':{'jobDescriptionText'}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").strip('\n').strip('\t')
+            except:
+                summary=''
 
             try:
                 email = standardre.findall(r'[\w\.-]+@[\w\.-]+\.\w+', summary)
