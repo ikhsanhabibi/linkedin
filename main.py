@@ -14,7 +14,7 @@ urls = open("urls.txt").readlines()
 
 
 # Write to CSV file
-outfile = open('indeed.csv','a', encoding="utf-8", newline='')
+outfile = open('indeed.csv','w', encoding="utf-8", newline='')
 writer = csv.writer(outfile, delimiter=",")
 writer.writerow(["Title", "Company", "City", "Country", "Type", "Summary", "Email", "Website", "Source", "PostedDate"])
 
