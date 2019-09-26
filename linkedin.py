@@ -1,33 +1,100 @@
+import time
+
+import bs4
 import requests
-import json
+import csv
 
-headers = {
-        "Accept": "application/json, text/javascript, */*; q=0.01",
-        "Origin": "https://cafe.bithumb.com",
-        "X-Requested-With": "XMLHttpRequest",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36",
-        "DNT": "1",
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-        "Referer": "https://cafe.bithumb.com/view/boards/43",
-        "Accept-Encoding": "gzip, deflate, br"
-    }
+from geopy.geocoders import Nominatim
+geolocator = Nominatim()
 
-string = """columns[0][data]=0&columns[0][name]=&columns[0][searchable]=true&columns[0][orderable]=false&columns[0][search][value]=&columns[0][search][regex]=false&columns[1][data]=1&columns[1][name]=&columns[1][searchable]=true&columns[1][orderable]=false&columns[1][search][value]=&columns[1][search][regex]=false&columns[2][data]=2&columns[2][name]=&columns[2][searchable]=true&columns[2][orderable]=false&columns[2][search][value]=&columns[2][search][regex]=false&columns[3][data]=3&columns[3][name]=&columns[3][searchable]=true&columns[3][orderable]=false&columns[3][search][value]=&columns[3][search][regex]=false&columns[4][data]=4&columns[4][name]=&columns[4][searchable]=true&columns[4][orderable]=false&columns[4][search][value]=&columns[4][search][regex]=false&start=30&length=30&search[value]=&search[regex]=false"""
+headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"}
+
+urls = open("urls_linkedin.txt").readlines()
 
 
-article_root = "https://cafe.bithumb.com/view/board-contents/{}"
+# Write to CSV file
+outfile = open('jobs.csv','a', encoding="utf-8", newline='')
+writer = csv.writer(outfile, delimiter=",")
+#writer.writerow(["Title", "Company", "City", "Country", "Type", "Summary", "Email", "Website", "Source", "PostedDate"])
 
-for page in range(1,4):
-    with requests.Session() as s:
-        s.headers.update(headers)
 
-        data = {"draw":page}
-        data.update( { ele[:ele.find("=")]:ele[ele.find("=")+1:] for ele in string.split("&") } )
-        data["start"] = 30 * (page - 1)
 
-        r = s.post('https://cafe.bithumb.com/boards/43/contents', data = data, verify = False) # set verify = False while you are using fiddler
+#Scrape all URLs
+for url in urls:
+    urlClean = url.replace("\n", "")
+    html = requests.get(urlClean, headers=headers).content.decode('utf-8')
+    #time.sleep(1)
+    soup = bs4.BeautifulSoup(html, 'html.parser')
 
-        json_data = json.loads(r.text).get("data") # transform string to dict then we can extract data easier
-        for each in json_data:
-            url = article_root.format(each[0])
-            print(url)
+    # Find the result (Total page)
+    div_results = soup.find("div", {"class":{"results-context-header"}}).find("span").text
+    total_page = (int(div_results)/10) + 2
+    pages = list(range(1, int(total_page)))
+
+
+
+    for page in pages:
+        page_link = requests.get(url + '&start=' + str(page), headers=headers).content.decode('utf-8')
+        soup = bs4.BeautifulSoup(page_link, 'html.parser')
+
+
+
+
+        print("=======================================================")
+        print("                    LINKEDIN                           ")
+        print("                                                       ")
+        print('Processing ...   Index: urls[' + str(urls.index(url)) + ']  ' + ' Page: ' + str(page) + ' of ' +  str(len(pages)))
+        print("                                                       ")
+        print("=======================================================")
+
+
+        job_list = soup.find_all('li', {"class":{"result-card"}})
+        for job in job_list:
+
+            link_job_page = job.find('a').attrs['href']
+            html = requests.get(link_job_page, headers=headers).content.decode('utf-8')
+            #time.sleep(1)
+            soup = bs4.BeautifulSoup(html, 'html.parser')
+
+
+            # Title, Company
+            titleStr = job.find('a').text
+            company = job.find('h4').text
+
+            # City & Country
+            location = job.find('div', {"class":{"result-card__meta job-result-card__meta"}}).find("span").text
+            locationSplit = location.replace(",", " ").split()
+
+            city = locationSplit[:2]
+            seperator = ','
+            cityStr = seperator.join(city).replace(',', " ")
+
+            try:
+                country = geolocator.geocode(city, language='en')._address.split()[-1]
+            except:
+                country = ''
+
+            type = soup.find('li', {"class":{"job-criteria__item"}}).find('span').text
+            typeStr = str(type)
+
+            summary = soup.find('div', {"class":{"description__text description__text--rich"}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").strip('\n').strip('\t')
+
+            emailStr = ''
+
+            websiteStr = job.find('a').attrs['href']
+
+            source = 'Linkedin'
+
+            postedDate = job.find('time').text
+            postedDateStr = str(postedDate)
+
+            writer.writerow(
+                [titleStr, company, cityStr, country, typeStr, summary, emailStr, websiteStr, source, postedDateStr])
+
+            print("_________________________________________________________________________________")
+            print('Title: ' + titleStr)
+            print('Company: ' + company)
+            print('City: ' + cityStr)
+            print('Type: ' + typeStr)
+
+
