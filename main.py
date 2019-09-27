@@ -1,6 +1,6 @@
-import indeed, linkedin
+import indeed, linkedin, simplyhired
 
-bots = ['indeed','linkedin']
+bots = ['indeed','linkedin', 'simplyhired']
 
 modules = map(__import__, bots)
 
