@@ -17,7 +17,7 @@ urls = ["https://www.simplyhired.de/search?q=android&l=berlin&jt=internship&job=
 # Write to CSV file
 outfile = open('jobs.csv','a', encoding="utf-8", newline='')
 writer = csv.writer(outfile, delimiter=",")
-writer.writerow(["Title", "Company"])
+#writer.writerow(["Title", "Company"])
 
 
 #Scrape all URLs

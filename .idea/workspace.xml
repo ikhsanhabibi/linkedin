@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c020ebac-787c-4b4e-8f27-445493775c6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/simplyhired.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jobs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simplyhired.py" beforeDir="false" afterPath="$PROJECT_DIR$/simplyhired.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urls_indeed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/urls_indeed.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,37 +17,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simplyhired.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="-133">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/bs4/element.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="1015" selection-start-line="1015" selection-end-line="1015" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jobs.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="37" selection-end-line="156" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
@@ -56,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linkedin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
+            <state relative-caret-position="1482">
               <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -65,32 +43,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/urls_linkedin.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="39" selection-end-line="1" selection-end-column="200" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/indeed.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
+            <state relative-caret-position="2527">
               <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="134" selection-end-column="53" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/urls_indeed.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="64" selection-start-column="64" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/urls_linkedin.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -151,15 +129,15 @@
         <option value="$PROJECT_DIR$/urls.txt" />
         <option value="$PROJECT_DIR$/indeed.csv" />
         <option value="$PROJECT_DIR$/text.py" />
-        <option value="$PROJECT_DIR$/urls_indeed.txt" />
         <option value="$PROJECT_DIR$/linkedin.csv" />
         <option value="$PROJECT_DIR$/data.csv" />
         <option value="$PROJECT_DIR$/linkedin.py" />
         <option value="$PROJECT_DIR$/indeed.py" />
-        <option value="$PROJECT_DIR$/simplyhired.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/jobs.csv" />
         <option value="$PROJECT_DIR$/urls_linkedin.txt" />
+        <option value="$PROJECT_DIR$/simplyhired.py" />
+        <option value="$PROJECT_DIR$/urls_indeed.txt" />
+        <option value="$PROJECT_DIR$/jobs.csv" />
       </list>
     </option>
   </component>
@@ -346,12 +324,12 @@
       <workItem from="1569311973599" duration="24762000" />
       <workItem from="1569397386493" duration="24116000" />
       <workItem from="1569484611010" duration="20592000" />
-      <workItem from="1569570243170" duration="14620000" />
+      <workItem from="1569570243170" duration="15072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116696000" />
+    <option name="totallyTimeSpent" value="117148000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,12 +344,12 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.15085287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.15085287" />
       <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.14925373" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13976164" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.7291441" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4084507" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -380,7 +358,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32719395" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32719395" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -584,13 +562,6 @@ seperator.join(typeStr)</expression-string>
     <entry file="file://$PROJECT_DIR$/ghostdriver.log" />
     <entry file="file://$PROJECT_DIR$/wholefoods_stores.json" />
     <entry file="file://$PROJECT_DIR$/data.csv" />
-    <entry file="file://$PROJECT_DIR$/urls_indeed.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="65" selection-start-column="65" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/geopy/geocoders/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -626,23 +597,6 @@ seperator.join(typeStr)</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indeed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="134" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simplyhired.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -650,9 +604,16 @@ seperator.join(typeStr)</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/simplyhired.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/linkedin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
+        <state relative-caret-position="1482">
           <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -660,21 +621,34 @@ seperator.join(typeStr)</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jobs.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="37" selection-end-line="156" />
+    <entry file="file://$PROJECT_DIR$/indeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2527">
+          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="134" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/urls_linkedin.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="1" column="39" selection-end-line="1" selection-end-column="200" />
+          <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urls_indeed.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
   </component>
