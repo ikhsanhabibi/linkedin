@@ -11,13 +11,13 @@ geolocator = Nominatim()
 
 headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"}
 
-urls = ["https://www.simplyhired.de/search?q=android&l=berlin&jt=internship&job=toouc-wnNEPH1BgO9HWbJ3HkvCjsJemdpWImTtm8dnB1MY5MLz_6MA"]
+urls = open("urls_simplyhired.txt").readlines()
 
 
 # Write to CSV file
 outfile = open('jobs.csv','a', encoding="utf-8", newline='')
 writer = csv.writer(outfile, delimiter=",")
-#writer.writerow(["Title", "Company"])
+
 
 
 #Scrape all URLs

@@ -16,7 +16,7 @@ urls = open("urls_indeed.txt").readlines()
 # Write to CSV file
 outfile = open('jobs.csv','w', encoding="utf-8", newline='')
 writer = csv.writer(outfile, delimiter=",")
-writer.writerow(["Title", "Company", "City", "Country", "Type", "Summary", "Email", "Website", "Source", "PostedDate"])
+#writer.writerow(["Title", "Company", "City", "Country", "Type", "Summary", "Email", "Website", "Source", "PostedDate"])
 
 
 #Scrape all URLs

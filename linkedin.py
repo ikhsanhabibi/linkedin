@@ -74,7 +74,7 @@ for url in urls:
             except:
                 country = ''
 
-            type = soup.find('li', {"class":{"job-criteria__item"}}).find('span').text
+            type = soup.find_all('li', {"class":{"job-criteria__item"}})[1].find('span').text
             typeStr = str(type)
 
             summary = soup.find('div', {"class":{"description__text description__text--rich"}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").strip('\n').strip('\t')
