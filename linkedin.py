@@ -77,7 +77,23 @@ for url in urls:
             type = soup.find_all('li', {"class":{"job-criteria__item"}})[1].find('span').text
             typeStr = str(type)
 
-            summary = soup.find('div', {"class":{"description__text description__text--rich"}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").strip('\n').strip('\t')
+            internship = ''
+            fulltime = ''
+            parttime = ''
+
+            if typeStr in ('Internship','Praktikum'):
+                internship = 'Yes'
+            elif typeStr in ('Fulltime','Full-time','Vollzeit','Festanstellung','Permanent'):
+                fulltime = 'Yes'
+            elif typeStr in ('Parttime','Part-time','Teilzeit', 'Contract'):
+                parttime = 'Yes'
+            else:
+                internship = ''
+                fulltime = ''
+                parttime = ''
+
+
+            summary = soup.find('div', {"class":{"description__text description__text--rich"}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").replace("'","").strip('\n').strip('\t')
 
             emailStr = ''
 
@@ -89,7 +105,7 @@ for url in urls:
             postedDateStr = str(postedDate)
 
             writer.writerow(
-                [titleStr, company, cityStr, country, typeStr, summary, emailStr, websiteStr, source, postedDateStr])
+                [titleStr, company, cityStr, country, internship, fulltime, parttime, summary, emailStr, websiteStr, source, postedDateStr])
 
             print("_________________________________________________________________________________")
             print('Title: ' + titleStr)

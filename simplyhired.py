@@ -90,17 +90,58 @@ for url in urls:
 
             try:
                 type = soup.find('i', {"class": {"fa fa-briefcase"}}).next
-                typeStr = type.text.split("|")
+                typeList = type.text.replace(" ", "" ).split("|")
+
+                internship = ''
+                if 'Internship' in typeList:
+                    internship = 'Yes'
+                elif 'Praktikum' in typeList:
+                    internship = 'Yes'
+                elif 'Apprenticeship' in typeList:
+                    internship = 'Yes'
+                else:
+                    internship = ''
+
+                fulltime = ''
+                if 'Fulltime' in typeList:
+                    fulltime = 'Yes'
+                elif 'Full-time' in typeList:
+                    fulltime = 'Yes'
+                elif 'Vollzeit' in typeList:
+                    fulltime = 'Yes'
+                elif 'Festanstellung' in typeList:
+                    fulltime = 'Yes'
+                elif 'Permanent' in typeList:
+                    fulltime = 'Yes'
+                else:
+                    fulltime = ''
+
+
+                parttime = ''
+                if 'Parttime' in typeList:
+                    parttime = 'Yes'
+                elif 'Part-time' in typeList:
+                    parttime = 'Yes'
+                elif 'Teilzeit' in typeList:
+                    parttime = 'Yes'
+                elif 'Contract' in typeList:
+                    parttime = 'Yes'
+                else:
+                    parttime = ''
+
             except:
-                typeStr = ''
+                typeList = ''
+                internship = ''
+                fulltime = ''
+                parttime = ''
 
             try:
-                summary = soup.find('div' , {"class":{"viewjob-description"}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").strip('\n').strip('\t')
+                summary = soup.find('div' , {"class":{"viewjob-description"}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").replace("'","").strip('\n').strip('\t')
             except:
                 summary = ''
 
             try:
-                email = standardre.findall(r'[\w\.-]+@[\w\.-]+\.\w+', summary)
+                email = standardre.search(r'[\w\.-]+@[\w\.-]+\.\w+', summary).group()
                 emailStr = str(email)
                 containsAt = standardre.search('@', emailStr)
                 if containsAt == None:
@@ -125,12 +166,12 @@ for url in urls:
             # scrapeDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
             writer.writerow(
-                [titleStr, company, city, country, typeStr, summary, emailStr, websiteStr, source, postedDateStr])
+                [titleStr, company, city, country, internship, fulltime, parttime, summary, emailStr, websiteStr, source, postedDateStr])
 
             print("_________________________________________________________________________________")
             print('Title: ' + titleStr)
             print('Company: ' + company)
             print('City: ' + city)
             seperator = ','
-            print('Type: ' + seperator.join(typeStr))
+            print('Type: ' + seperator.join(typeList))
 

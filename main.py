@@ -1,4 +1,3 @@
-
 import indeed, linkedin, simplyhired
 
 bots = ['indeed','linkedin', 'simplyhired']
@@ -8,8 +7,6 @@ modules = map(__import__, bots)
 import multiprocessing
 
 multiprocessing.Process(target=modules)
-
-
 
 
 # DATABASE CONNECTION
@@ -38,7 +35,9 @@ sql = """CREATE TABLE jobs (
    Company TEXT,
    City TEXT,
    Country TEXT,
-   Type TEXT,
+   Internship TEXT,
+   Fulltime TEXT,
+   Parttime TEXT,
    Summary TEXT,
    Email TEXT,
    Website TEXT,
@@ -52,11 +51,13 @@ print ('..............................................')
 
 print ("\n\n\n" +"Inserting values into the table ..." + "\n\n\n")
 
+
+
 with open('jobs.csv', encoding="utf8", newline='') as csvfile:
     csv_data = csv.reader(csvfile)
     for row in csv_data:
-        sql = "insert into jobs (Title,Company,City,Country,Type,Summary,Email,Website,Source,PostedDate)" \
-              "values ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');"%(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9])
+        sql = "insert into jobs (Title,Company,City,Country,Internship,Fulltime,Parttime,Summary,Email,Website,Source,PostedDate) values ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s','%s', '%s');"\
+              %(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10],row[11])
         print(sql)
         try:
             cursor.execute(sql)
