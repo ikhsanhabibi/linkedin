@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c020ebac-787c-4b4e-8f27-445493775c6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indeed.py" beforeDir="false" afterPath="$PROJECT_DIR$/indeed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jobs.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linkedin.py" beforeDir="false" afterPath="$PROJECT_DIR$/linkedin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simplyhired.py" beforeDir="false" afterPath="$PROJECT_DIR$/simplyhired.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urls_indeed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/urls_indeed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urls_linkedin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/urls_linkedin.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urls_simplyhired.txt" beforeDir="false" afterPath="$PROJECT_DIR$/urls_simplyhired.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,27 +19,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urls_linkedin.txt">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="179" selection-start-column="179" selection-end-column="179" />
+            <state relative-caret-position="254">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jobs.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-1254" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urls_indeed.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="66" selection-start-column="66" selection-end-column="66" />
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="1">
+              <column index="0" width="100" />
+              <column index="1" width="100" />
+              <column index="2" width="100" />
+              <column index="3" width="226" />
+              <column index="4" width="100" />
+              <column index="5" width="100" />
+              <column index="6" width="100" />
+              <column index="7" width="100" />
+              <column index="8" width="255" />
+              <column index="9" width="126" />
+              <column index="10" width="100" />
+              <column index="11" width="100" />
             </state>
           </provider>
         </entry>
@@ -60,7 +61,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>log</find>
       <find>php</find>
       <find>bosch</find>
       <find>data scie</find>
@@ -90,6 +90,7 @@
       <find>join</find>
       <find>berlin</find>
       <find>indeed</find>
+      <find>@</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,13 +108,13 @@
         <option value="$PROJECT_DIR$/text.py" />
         <option value="$PROJECT_DIR$/linkedin.csv" />
         <option value="$PROJECT_DIR$/data.csv" />
-        <option value="$PROJECT_DIR$/linkedin.py" />
         <option value="$PROJECT_DIR$/indeed.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/urls_simplyhired.txt" />
         <option value="$PROJECT_DIR$/simplyhired.py" />
         <option value="$PROJECT_DIR$/urls_indeed.txt" />
         <option value="$PROJECT_DIR$/urls_linkedin.txt" />
+        <option value="$PROJECT_DIR$/linkedin.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/jobs.csv" />
       </list>
     </option>
@@ -130,6 +131,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,7 +143,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,8 +284,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.simplyhired" />
         <item itemvalue="Python.linkedin" />
+        <item itemvalue="Python.simplyhired" />
         <item itemvalue="Python.indeed" />
         <item itemvalue="Python.text" />
       </list>
@@ -310,12 +311,14 @@
       <workItem from="1569830479254" duration="2221000" />
       <workItem from="1570003899641" duration="1144000" />
       <workItem from="1570452996820" duration="8326000" />
-      <workItem from="1570522193359" duration="17420000" />
+      <workItem from="1570522193359" duration="17756000" />
+      <workItem from="1570607994069" duration="601000" />
+      <workItem from="1570700170214" duration="7344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148334000" />
+    <option name="totallyTimeSpent" value="156615000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,13 +333,13 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.15724947" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.16044776" />
       <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.14925373" />
       <window_info id="Favorites" order="2" sideWeight="0.5016234" weight="0.15724947" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2340195" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.33261105" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32286024" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5005417" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
@@ -344,7 +347,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32719395" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3856988" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -379,42 +382,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/linkedin.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/linkedin.py</url>
-          <line>86</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/linkedin.py</url>
-          <line>88</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/linkedin.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/linkedin.py</url>
-          <line>95</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/linkedin$linkedin.coverage" NAME="linkedin Coverage Results" MODIFIED="1570530109539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/linkedin$linkedin.coverage" NAME="linkedin Coverage Results" MODIFIED="1570715339849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/linkedin$simplyhired.coverage" NAME="simplyhired Coverage Results" MODIFIED="1570545424567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/linkedin$indeed.coverage" NAME="indeed Coverage Results" MODIFIED="1570528695313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/linkedin$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1570547230931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/linkedin$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1570717285429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/linkedin$geolocate.coverage" NAME="geolocate Coverage Results" MODIFIED="1569315298501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/linkedin$main.coverage" NAME="main Coverage Results" MODIFIED="1569405749975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/linkedin$test.coverage" NAME="test Coverage Results" MODIFIED="1569402501297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -492,47 +464,47 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>type.text.replace(&quot; &quot;, &quot;&quot; ).split(&quot;|&quot;)</expression-string>
+        <expression-string>geolocator.geocode(cityStr, language='en')._address.split(&quot;,&quot;)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>type.text.replace(&quot; &quot;, &quot;&quot; )</expression-string>
+        <expression-string>geolocator.geocode(cityStr, language='en')._address.split(&quot;,&quot;)[-1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>type.text.trim()</expression-string>
+        <expression-string>geolocator.geocode(cityStr, language='en')._address.split(&quot;,&quot;)[:-1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>type.text.trim</expression-string>
+        <expression-string>geolocator.geocode(cityStr, language='en')._address.split(&quot;,&quot;)[:1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>type.text</expression-string>
+        <expression-string>geolocator.geocode(cityStr, language='en')._address.split(&quot;,&quot;)[1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>type.text.split(&quot;|&quot;)</expression-string>
+        <expression-string>geolocator.geocode(cityStr, language='en')._address</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>type.text.split(&quot;|&quot;).trim()</expression-string>
+        <expression-string>geolocator.geocode(cityStr, language='en')._address.split()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>('Internship' in typeList)</expression-string>
+        <expression-string>geolocator.geocode(cityStr, language='en')._address.split()[-1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>'Part-time' in typeList</expression-string>
+        <expression-string>geolocator.geocode(cityStr, language='en')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -658,26 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indeed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1121">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/linkedin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-970">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls_simplyhired.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -692,11 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-627" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls_indeed.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -704,18 +651,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/indeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" lean-forward="true" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linkedin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="104" column="33" lean-forward="true" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/urls_linkedin.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="179" selection-start-column="179" selection-end-column="179" />
+          <caret column="55" selection-end-column="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-1254" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="1">
+          <column index="0" width="100" />
+          <column index="1" width="100" />
+          <column index="2" width="100" />
+          <column index="3" width="226" />
+          <column index="4" width="100" />
+          <column index="5" width="100" />
+          <column index="6" width="100" />
+          <column index="7" width="100" />
+          <column index="8" width="255" />
+          <column index="9" width="126" />
+          <column index="10" width="100" />
+          <column index="11" width="100" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

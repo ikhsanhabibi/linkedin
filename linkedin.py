@@ -1,4 +1,5 @@
 import time
+import re as standardre
 
 import bs4
 import requests
@@ -70,7 +71,7 @@ for url in urls:
             cityStr = seperator.join(city).replace(',', " ")
 
             try:
-                country = geolocator.geocode(city, language='en')._address.split()[-1]
+                country = geolocator.geocode(cityStr, language='en')._address.split(",")[-1]
             except:
                 country = ''
 
@@ -85,7 +86,7 @@ for url in urls:
                 internship = 'Yes'
             elif typeStr in ('Fulltime','Full-time','Vollzeit','Festanstellung','Permanent'):
                 fulltime = 'Yes'
-            elif typeStr in ('Parttime','Part-time','Teilzeit', 'Contract'):
+            elif typeStr in ('Parttime','Part-time','Teilzeit', 'Contract', 'Temporary'):
                 parttime = 'Yes'
             else:
                 internship = ''
@@ -95,7 +96,16 @@ for url in urls:
 
             summary = soup.find('div', {"class":{"description__text description__text--rich"}}).text.replace('\t',' ').replace('\n',' ').replace('"',"").replace("'","").strip('\n').strip('\t')
 
-            emailStr = ''
+            try:
+                email = standardre.search(r'(?:\.?)([\w\-_+#~!$&\'\.]+(?<!\.)(@|[ ]?\(?[ ]?(at|AT)[ ]?\)?[ ]?)(?<!\.)[\w]+[\w\-\.]*\.[a-zA-Z-]{2,3})(?:[^\w])', summary).group()
+                emailStr = str(email)
+                containsAt = standardre.search('@', emailStr)
+                containsAt = standardre.search('@', emailStr)
+                if containsAt == None:
+                    emailStr = ''
+
+            except:
+                emailStr = ''
 
             websiteStr = job.find('a').attrs['href']
 

@@ -74,7 +74,7 @@ import os
 print ('..............................................')
 
 #print ("\n\n\n" +"Calling filter_jobs ...  Please wait ... " + "\n\n\n")
-#cursor.callproc('filter_jobs', args=())
+cursor.callproc('filter_jobs', args=())
 print ('..............................................')
 
 # Commit to database, finalize the changes
