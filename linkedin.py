@@ -1,5 +1,5 @@
-import time
 import re as standardre
+from datetime import datetime
 
 import bs4
 import requests
@@ -71,7 +71,8 @@ for url in urls:
             cityStr = seperator.join(city).replace(',', " ")
 
             try:
-                country = geolocator.geocode(cityStr, language='en')._address.split(",")[-1]
+                countryName = geolocator.geocode(cityStr, language='en')._address.split(",")[-1]
+                country = countryName.strip()
             except:
                 country = ''
 
@@ -114,8 +115,10 @@ for url in urls:
             postedDate = job.find('time').text
             postedDateStr = str(postedDate)
 
+            scrapeDate = datetime.now().strftime('%Y-%m-%d')
+
             writer.writerow(
-                [titleStr, company, cityStr, country, internship, fulltime, parttime, summary, emailStr, websiteStr, source, postedDateStr])
+                [titleStr, company, cityStr, country, internship, fulltime, parttime, summary, emailStr, websiteStr, source, postedDateStr, scrapeDate])
 
             print("_________________________________________________________________________________")
             print('Title: ' + titleStr)

@@ -84,7 +84,8 @@ for url in urls:
             city = soup.find('span', {"class":{"location"}}).text.strip()
 
             try:
-                country = geolocator.geocode(city, language='en')._address.split()[-1]
+                countryName = geolocator.geocode(city, language='en')._address.split()[-1]
+                country = countryName.strip()
             except:
                 country = ''
 
@@ -162,11 +163,10 @@ for url in urls:
 
             source = 'Simply Hired'
 
-
-            # scrapeDate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            scrapeDate = datetime.now().strftime('%Y-%m-%d')
 
             writer.writerow(
-                [titleStr, company, city, country, internship, fulltime, parttime, summary, emailStr, websiteStr, source, postedDateStr])
+                [titleStr, company, city, country, internship, fulltime, parttime, summary, emailStr, websiteStr, source, postedDateStr, scrapeDate])
 
             print("_________________________________________________________________________________")
             print('Title: ' + titleStr)

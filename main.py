@@ -1,3 +1,5 @@
+import requests
+
 import indeed, linkedin, simplyhired
 
 bots = ['indeed','linkedin', 'simplyhired']
@@ -9,79 +11,40 @@ import multiprocessing
 multiprocessing.Process(target=modules)
 
 
-# DATABASE CONNECTION
-
-import pymysql
-
-# Open database connection
-db = pymysql.connect("localhost","root","root","jobs")
-print ("\n\nConnecting database ...\n\n")
-
-# prepare a cursor object using cursor() method
-cursor = db.cursor()
-
-# drop table
-try:
-    cursor.execute('DROP TABLE jobs')
-except:
-    print("There is no main table in database.")
-
-
 import csv
+import json
 
-#create table
-sql = """CREATE TABLE jobs (
-   Title TEXT,
-   Company TEXT,
-   City TEXT,
-   Country TEXT,
-   Internship TEXT,
-   Fulltime TEXT,
-   Parttime TEXT,
-   Summary TEXT,
-   Email TEXT,
-   Website TEXT,
-   Source TEXT,
-   PostedDate TEXT) CHARSET=utf8mb4 COLLATE=utf8mb4_bin"""
-
-cursor.execute(sql)
-print ('..............................................')
-print (str(sql) +"\n\n" +"A new table is created.")
-print ('..............................................')
-
-print ("\n\n\n" +"Inserting values into the table ..." + "\n\n\n")
+fieldnames = ("Title","Company","City","Country","Internship","Fulltime","Parttime","Summary","Email","Website","Source","PostedDate","ScrapeDate")
+with open('jobs.csv', 'r', encoding='utf8') as csvfile:
+    with open('jobs.json', 'w', encoding='utf8') as jsonfile:
+        reader = csv.DictReader(csvfile, fieldnames, delimiter=',')
+        json.dump(list(reader), jsonfile)
 
 
 
-with open('jobs.csv', encoding="utf8", newline='') as csvfile:
-    csv_data = csv.reader(csvfile)
-    for row in csv_data:
-        sql = "insert into jobs (Title,Company,City,Country,Internship,Fulltime,Parttime,Summary,Email,Website,Source,PostedDate) values ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s','%s', '%s');"\
-              %(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10],row[11])
-        print(sql)
-        try:
-            cursor.execute(sql)
-            db.commit()
-            print("Success")
-        except:
-            db.rollback()
-            print("Failed")
 
-# remove main.csv file
-import os
-#os.remove('jobs.csv')
 
-print ('..............................................')
+from pymongo import MongoClient
+import json
 
-#print ("\n\n\n" +"Calling filter_jobs ...  Please wait ... " + "\n\n\n")
-cursor.callproc('filter_jobs', args=())
-print ('..............................................')
+HOST,PORT = ('localhost',27017)
+DATABASE_NAME = 'ng8crud'
+COLLECTION_NAME = 'jobs'
 
-# Commit to database, finalize the changes
-db.commit()
+client = MongoClient(HOST,PORT) #Connect to Mongo db
 
-print(cursor.execute("select * from jobs"))
+db = client[DATABASE_NAME] #Connect to specific database
+collection = db[COLLECTION_NAME] #Access specific collection
 
-# disconnect from server
-db.close()
-print ("DISCONNECTED FROM SERVER")
+#Then you would need to load a json into a dict(post) then post it using
+
+
+
+with open('jobs.json', 'r', encoding='utf-8') as sample:
+    for line in sample:
+        line = json.loads(line.strip())
+        collection.insert_many(line)
+
+
+
+client.close()
