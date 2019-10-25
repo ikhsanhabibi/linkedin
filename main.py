@@ -11,6 +11,8 @@ import multiprocessing
 multiprocessing.Process(target=modules)
 
 
+
+
 import csv
 import json
 
@@ -23,28 +25,24 @@ with open('jobs.csv', 'r', encoding='utf8') as csvfile:
 
 
 
-
 from pymongo import MongoClient
 import json
 
 HOST,PORT = ('localhost',27017)
 DATABASE_NAME = 'ng8crud'
-COLLECTION_NAME = 'jobs'
+COLLECTION_NAME = 'Job'
 
 client = MongoClient(HOST,PORT) #Connect to Mongo db
 
 db = client[DATABASE_NAME] #Connect to specific database
 collection = db[COLLECTION_NAME] #Access specific collection
 
+#db.drop_collection('jobs')
+
 #Then you would need to load a json into a dict(post) then post it using
-
-
-
 with open('jobs.json', 'r', encoding='utf-8') as sample:
     for line in sample:
         line = json.loads(line.strip())
         collection.insert_many(line)
-
-
 
 client.close()

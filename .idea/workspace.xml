@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indeed.py" beforeDir="false" afterPath="$PROJECT_DIR$/indeed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jobs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs.json" beforeDir="false" afterPath="$PROJECT_DIR$/jobs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linkedin.py" beforeDir="false" afterPath="$PROJECT_DIR$/linkedin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simplyhired.py" beforeDir="false" afterPath="$PROJECT_DIR$/simplyhired.py" afterDir="false" />
@@ -35,23 +36,15 @@
               <column index="6" width="100" />
               <column index="7" width="100" />
               <column index="8" width="100" />
-              <column index="9" width="100" />
+              <column index="9" width="135" />
               <column index="10" width="100" />
               <column index="11" width="100" />
               <column index="12" width="100" />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="290">
+              <caret line="40" column="47" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -59,17 +52,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jobs.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="32" lean-forward="true" selection-end-column="25428" />
+            <state relative-caret-position="152">
+              <caret column="1488" selection-end-column="134799" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/venv/DB Connection">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+            <state relative-caret-position="436">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>php</find>
       <find>bosch</find>
       <find>data scie</find>
       <find>frankfur</find>
@@ -115,6 +110,7 @@
       <find>berlin</find>
       <find>indeed</find>
       <find>@</find>
+      <find>acker</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,15 +129,15 @@
         <option value="$PROJECT_DIR$/linkedin.csv" />
         <option value="$PROJECT_DIR$/data.csv" />
         <option value="$PROJECT_DIR$/urls_indeed.txt" />
+        <option value="$PROJECT_DIR$/venv/DB Connection" />
         <option value="$PROJECT_DIR$/indeed.py" />
         <option value="$PROJECT_DIR$/linkedin.py" />
-        <option value="$PROJECT_DIR$/simplyhired.py" />
         <option value="$PROJECT_DIR$/urls_simplyhired.txt" />
+        <option value="$PROJECT_DIR$/simplyhired.py" />
         <option value="$PROJECT_DIR$/urls_linkedin.txt" />
         <option value="$PROJECT_DIR$/jobs.csv" />
         <option value="$PROJECT_DIR$/jobs.json" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/venv/DB Connection" />
       </list>
     </option>
   </component>
@@ -163,11 +159,6 @@
             <path>
               <item name="linkedin" type="b2602c69:ProjectViewProjectNode" />
               <item name="linkedin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="linkedin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="linkedin" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,9 +306,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.indeed" />
         <item itemvalue="Python.linkedin" />
         <item itemvalue="Python.simplyhired" />
+        <item itemvalue="Python.indeed" />
         <item itemvalue="Python.text" />
       </list>
     </recent_temporary>
@@ -347,12 +338,12 @@
       <workItem from="1570700170214" duration="7367000" />
       <workItem from="1571230479211" duration="2681000" />
       <workItem from="1571915650318" duration="8528000" />
-      <workItem from="1571993014777" duration="3692000" />
+      <workItem from="1571993014777" duration="9838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171539000" />
+    <option name="totallyTimeSpent" value="177685000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,13 +358,13 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.1652452" />
-      <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.14925373" />
-      <window_info id="Favorites" order="2" sideWeight="0.5016234" weight="0.15724947" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973913" visible="true" weight="0.1652452" />
+      <window_info id="Favorites" order="1" sideWeight="0.5016234" weight="0.15724947" />
+      <window_info id="Structure" order="2" sideWeight="0.5026087" side_tool="true" visible="true" weight="0.1652452" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3531961" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.248104" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37703142" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5146262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
@@ -382,7 +373,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3856988" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -417,10 +408,10 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/linkedin$linkedin.coverage" NAME="linkedin Coverage Results" MODIFIED="1571235912776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/linkedin$simplyhired.coverage" NAME="simplyhired Coverage Results" MODIFIED="1571235824851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/linkedin$indeed.coverage" NAME="indeed Coverage Results" MODIFIED="1571916070159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/linkedin$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1571996650173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/linkedin$linkedin.coverage" NAME="linkedin Coverage Results" MODIFIED="1571999201632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/linkedin$simplyhired.coverage" NAME="simplyhired Coverage Results" MODIFIED="1571998968481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/linkedin$indeed.coverage" NAME="indeed Coverage Results" MODIFIED="1571998402976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/linkedin$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1572015468810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/linkedin$geolocate.coverage" NAME="geolocate Coverage Results" MODIFIED="1569315298501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/linkedin$main.coverage" NAME="main Coverage Results" MODIFIED="1569405749975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/linkedin$test.coverage" NAME="test Coverage Results" MODIFIED="1569402501297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -498,47 +489,47 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>soup.findAll(&quot;div&quot;,{&quot;class&quot;:&quot;TwoPane-paneHolder TwoPane-paneHolder--left&quot;})</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>soup.findAll(&quot;div&quot;,{&quot;class&quot;:&quot;SerpJob&quot;})</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>soup.findAll(&quot;div&quot;,{&quot;class&quot;:&quot;SerpJob isp&quot;})</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>soup.findAll(&quot;div&quot;,{&quot;class&quot;:&quot;jobs&quot;})</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>soup.findAll(&quot;div&quot;,{&quot;class&quot;:&quot;job&quot;})</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>soup.findAll(&quot;div&quot;,{&quot;class&quot;:&quot;card js-job&quot;})</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>geocoders.Google()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>gn.geocode(city)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>countryName.strip()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>countryName.</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>countryName.trim</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>countryName</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>countryName.trim()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>geolocator.geocode(cityStr, language='en')._address.split(&quot;,&quot;)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>geolocator.geocode(cityStr, language='en')._address.split(&quot;,&quot;)[-1]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>geolocator.geocode(cityStr, language='en')._address.split(&quot;,&quot;)[:-1]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>geolocator.geocode(cityStr, language='en')._address.split(&quot;,&quot;)[:1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -664,10 +655,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/DB Connection">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="66" column="40" lean-forward="true" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="85" column="45" lean-forward="true" selection-start-line="85" selection-start-column="45" selection-end-line="85" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urls_simplyhired.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="123" selection-start-column="123" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simplyhired.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="167" column="28" selection-start-line="167" selection-start-column="28" selection-end-line="167" selection-end-column="28" />
+        <state relative-caret-position="-1446">
+          <caret line="70" column="55" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linkedin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -678,34 +706,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls_simplyhired.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indeed.py">
+    <entry file="file://$PROJECT_DIR$/urls_linkedin.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="187" selection-start-column="187" selection-end-column="187" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls_linkedin.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/linkedin.py">
+    <entry file="file://$PROJECT_DIR$/jobs.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#1#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret column="1488" selection-end-column="134799" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="290">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="47" />
+        </state>
+      </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="1">
           <column index="0" width="100" />
@@ -717,34 +737,20 @@
           <column index="6" width="100" />
           <column index="7" width="100" />
           <column index="8" width="100" />
-          <column index="9" width="100" />
+          <column index="9" width="135" />
           <column index="10" width="100" />
           <column index="11" width="100" />
           <column index="12" width="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jobs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" lean-forward="true" selection-end-column="25428" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+        <state relative-caret-position="436">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/DB Connection">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
         </state>
       </provider>
     </entry>

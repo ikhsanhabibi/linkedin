@@ -6,7 +6,7 @@ import requests
 import csv
 
 from geopy.geocoders import Nominatim
-geolocator = Nominatim()
+
 
 headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"}
 
@@ -71,6 +71,7 @@ for url in urls:
             cityStr = seperator.join(city).replace(',', " ")
 
             try:
+                geolocator = Nominatim()
                 countryName = geolocator.geocode(cityStr, language='en')._address.split(",")[-1]
                 country = countryName.strip()
             except:
