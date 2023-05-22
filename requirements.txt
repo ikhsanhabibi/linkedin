@@ -1,4 +1,4 @@
-requests==2.22.0
+requests==2.31.0
 beautifulsoup4==4.8.1
 geopy==1.20.0
 pymongo==3.9.0
